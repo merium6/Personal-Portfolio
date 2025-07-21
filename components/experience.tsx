@@ -11,7 +11,6 @@ import {
   FaGraduationCap, 
   FaMapMarkerAlt, 
   FaClock, 
-  FaExternalLinkAlt,
   FaUserTie,
 } from "react-icons/fa";
 import { MdWork, MdSchool } from "react-icons/md";
@@ -110,7 +109,8 @@ export default function Experience() {
       }
     };
     
-    return typeColorMap[item.type?.toLowerCase()] || typeColorMap.default;
+    const typeKey = (item.type?.toLowerCase() as keyof typeof typeColorMap) || "default";
+    return typeColorMap[typeKey] || typeColorMap.default;
   };
 
   // Helper to check if a description should be truncated
@@ -128,7 +128,9 @@ export default function Experience() {
         >
           <SectionHeading>My Experience</SectionHeading>
           <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-            My professional journey and career milestones that have shaped my expertise across full-stack development, AI & ML, and leadership roles.
+          My professional journey reflects a strong foundation in front-end development, with hands-on experience building scalable, 
+          responsive web applications using React.js, Next.js, and Tailwind CSS. Through real-world projects and industry roles, 
+          I’ve honed skills in performance optimization, UI design, and collaborative development in Agile teams.
           </p>
           
           {/* Filter tabs */}
@@ -289,16 +291,6 @@ export default function Experience() {
                       )}
                       
                       {/* Link if available */}
-                      {item.link && (
-                        <a 
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-4 inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
-                        >
-                          Visit project <FaExternalLinkAlt className="ml-1 text-xs" />
-                        </a>
-                      )}
                     </div>
                   </motion.div>
                 </motion.div>

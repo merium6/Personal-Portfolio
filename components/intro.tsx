@@ -1,13 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare, FaCode, FaServer, FaMobile, FaDatabase, FaRobot, FaCloud } from "react-icons/fa";
-import { SiOpenai, SiAzuredevops } from "react-icons/si";
+import { FaGithubSquare, FaCode, FaRobot, FaReact, FaReadme, FaUikit, FaCss3 } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -38,11 +36,11 @@ export default function Intro() {
   // Rotating skills showcase - updated with expanded expertise
   const skills = [
     { text: "Frontend Development", icon: <FaCode className="text-blue-500" /> },
-    { text: "Backend Systems", icon: <FaServer className="text-green-500" /> },
-    { text: "DevOps & Cloud", icon: <FaCloud className="text-orange-500" /> },
-    { text: "LLM Integration", icon: <SiOpenai className="text-purple-500" /> },
-    { text: "AI Solutions", icon: <FaRobot className="text-red-500" /> },
-    { text: "Full Stack Development", icon: <FaDatabase className="text-indigo-500" /> }
+    { text: "React Js", icon: <FaReact className="text-green-500" /> },
+    { text: "Next Js", icon: <FaRobot className="text-red-500" /> },
+    { text: "Redux", icon: <FaReadme className="text-purple-500" /> },
+    { text: "UI Libraries", icon: <FaUikit className="text-orange-500" /> },
+    { text: "CSS Frameworks", icon: <FaCss3 className="text-indigo-500" /> }
   ];
 
   // Rotate through skills every 3 seconds
@@ -123,31 +121,7 @@ export default function Intro() {
         >
           <div className="relative">
             <motion.div
-              className="p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
-            >
-              <div className="p-2 rounded-full bg-white dark:bg-gray-900">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                >
-                  <Image
-                    src="/dp.jpg" // Ensure this image exists in your public folder
-                    alt="Abdul Aziz"
-                    width="192"
-                    height="192"
-                    quality="95"
-                    priority={true}
-                    className="h-32 w-32 rounded-full object-cover shadow-xl"
-                  />
-                </motion.div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="absolute -bottom-2 -right-2 flex items-center justify-center w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg border-2 border-white dark:border-gray-700"
+              className="absolute -bottom-2 -right-2 flex items-center justify-center w-20 h-20 bg-white dark:bg-gray-800 rounded-full shadow-lg border-2 border-white dark:border-gray-700"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ 
@@ -187,7 +161,7 @@ export default function Intro() {
           >
             Hi, I'm{" "}
             <span className="inline-block relative">
-              <span className="relative z-10">Abdul Aziz</span>
+              <span className="relative z-10">Khadeeja Asif</span>
               <motion.span 
                 className="absolute bottom-0 left-0 w-full h-3 bg-blue-200 dark:bg-blue-800/50 -z-10"
                 initial={{ width: 0 }}
@@ -277,7 +251,7 @@ export default function Intro() {
           >
             <a
               className="group relative overflow-hidden px-8 py-4 flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full shadow-lg border border-gray-200 dark:border-gray-700"
-              href="/CV.pdf"
+              href="/KhadeejaResume.pdf"
               download
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -304,7 +278,7 @@ export default function Intro() {
             >
               <a
                 className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full shadow-md border border-blue-200 dark:border-blue-800"
-                href="https://linkedin.com/in/connect2abdulaziz"
+                href="https://www.linkedin.com/in/khadeejah-asif/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
@@ -321,7 +295,7 @@ export default function Intro() {
             >
               <a
                 className="flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 rounded-full shadow-md border border-gray-200 dark:border-gray-700"
-                href="https://github.com/connect2abdulaziz"
+                href="https://github.com/Khadeejahh-Asiff"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"

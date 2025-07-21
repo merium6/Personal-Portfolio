@@ -8,8 +8,10 @@ import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight, FaFilter } from "react-icons/fa";
 
+type Project = typeof projectsData[number];
+
 // PaginationButton Component defined outside the main component
-const PaginationButton = ({ index, currentPage, onClick }) => {
+const PaginationButton = ({ index, currentPage, onClick }: { index: number; currentPage: number; onClick: () => void }) => {
   const isActive = currentPage === index;
   
   return (
@@ -49,8 +51,7 @@ const PaginationButton = ({ index, currentPage, onClick }) => {
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0);
-  const [activeFilter, setActiveFilter] = useState("All");
-  const [visibleProjects, setVisibleProjects] = useState(4);
+  const [activeFilter, setActiveFilter] = useState<string>("All");
   const [currentPage, setCurrentPage] = useState(0);
 
   // Get unique tags from all projects
@@ -59,7 +60,7 @@ export default function Projects() {
   // Filter projects based on active filter
   const filteredProjects = activeFilter === "All"
     ? projectsData
-    : projectsData.filter(project => project.tags.includes(activeFilter));
+    : projectsData.filter((project: Project) => Array.from(project.tags).includes(activeFilter as any));
   
   // Calculate total pages
   const projectsPerPage = 3;
@@ -113,9 +114,9 @@ export default function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Explore my recent work and personal projects. Each project showcases my technical skills and 
-          approach to problem-solving. Click on any project to learn more about the design process, 
-          technologies used, and outcomes.
+          Dive into the projects I’ve built, both professionally and personally. 
+          Whether it’s building scalable dashboards or crafting sleek UIs with React and Next.js, 
+          each project highlights my development workflow, design decisions, and technical toolkit.
         </motion.p>
         
         {/* Filter tabs */}

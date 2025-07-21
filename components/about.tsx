@@ -5,8 +5,6 @@ import SectionHeading from "./section-heading";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { FaRocket, FaBriefcase, FaTools, FaStar, FaGithub } from "react-icons/fa";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -22,7 +20,7 @@ export default function About() {
       icon: <FaRocket className="text-blue-500" />,
       emoji: "🚀",
       title: "Background",
-      content: "🚀 Senior Engineer & Tech Lead @ Developer Tag | ⚡ MERN/Next.js Architect | 🔄 DevOps Maestro | 🧠 LLM/LangChain Innovator | 🏆 LeetCode Top 5%",
+      content: "🚀 Front-end Developer with a focus on responsive and high-performance web apps using React.js, Next.js, and Tailwind CSS. Passionate about clean UI, smooth UX, and shipping polished products. Currently working at InvoByte, always learning, always building.",
       color: "from-blue-500 to-indigo-600",
       darkColor: "from-blue-600 to-indigo-700",
       bgLight: "bg-blue-50",
@@ -32,7 +30,7 @@ export default function About() {
       icon: <FaBriefcase className="text-green-500" />,
       emoji: "💼",
       title: "Experience",
-      content: "Currently, I'm a Senior Software Engineer & Team Lead at Developer Tag, where I specialize in MERN/Next.js backend architecture, DevOps implementations, and AI solutions using LangChain and LangGraph. Previously, I worked as a Software Engineer at DiveScale for 4 months and as an Associate Software Engineer at Kwanso, focusing on ReactJS, NodeJS, and TypeScript. I also gained valuable experience during my summer internships at DevTown and Pyflow.",
+      content: "Currently at InvoByte building secure access control dashboards with Next.js, shadcn/ui & Tailwind. Previously worked at Tekvaly & Phenologix on platforms like ScrumDroid and Hiredroid using React.js and SWR. Delivered optimized UI and seamless data experiences.",
       color: "from-green-500 to-teal-600",
       darkColor: "from-green-600 to-teal-700",
       bgLight: "bg-green-50",
@@ -42,7 +40,7 @@ export default function About() {
       icon: <FaTools className="text-amber-500" />,
       emoji: "🔧",
       title: "Skills",
-      content: "My skill set includes Full Stack Development (MERN), ReactJS, NodeJS, TypeScript, Vue.js, AWS, Git & GitHub, and problem-solving, showcased through my achievements on LeetCode.",
+      content: "React.js, Next.js, JavaScript (ES6+), Redux, Tailwind CSS, MUI, shadcn/ui, SWR, TypeScript, HTML5/CSS3, Responsive Design, React Bootstrap. I also work with GitHub, Postman, Swagger, and VS Code on the daily grind.",
       color: "from-amber-500 to-orange-600",
       darkColor: "from-amber-600 to-orange-700",
       bgLight: "bg-amber-50",
@@ -52,7 +50,7 @@ export default function About() {
       icon: <FaStar className="text-rose-500" />,
       emoji: "🌟",
       title: "Achievements",
-      content: "Career highlights include ranking in the Top 10 at the ICPC Asia Online Preliminary Programming Contest 2023, being named 'Student of the Year' at Akhuwat College Kasur in 2017, and achieving Rank 1 in the Quick Mind Game.",
+      content: "Graduated with a 3.61 CGPA in Software Engineering from UCP. Developed high-impact production-level projects during internships and jobs. Delivered performance-optimized UIs and reusable components, proving both speed and code quality.",
       color: "from-rose-500 to-pink-600",
       darkColor: "from-rose-600 to-pink-700",
       bgLight: "bg-rose-50",
@@ -60,15 +58,15 @@ export default function About() {
     },
     {
       icon: <FaGithub className="text-purple-500" />,
-      emoji: "👨‍💻",
+      emoji: "👩‍💻",
       title: "Projects",
-      content: "Explore my GitHub for web development projects. I'm excited to take on new challenges and collaborate in the dynamic world of technology!",
+      content: "Check out my GitHub for projects like my personal portfolio built with React.js and Heartland Rehab built with Next.js and React Bootstrap. My work shows strong component architecture, responsive design, and third-party integrations.",
       color: "from-purple-500 to-violet-600",
       darkColor: "from-purple-600 to-violet-700",
       bgLight: "bg-purple-50",
       bgDark: "dark:bg-purple-900/20"
     }
-  ];
+  ];  
 
   // Animation variants
   const containerVariants = {
@@ -157,17 +155,8 @@ export default function About() {
             >
               {/* Add your profile image here */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
-                AB
+                KA
               </div>
-              {/* Uncomment this when you have an image
-              <Image
-                src="/profile.jpg"
-                alt="Profile"
-                fill
-                sizes="96px"
-                className="object-cover"
-              />
-              */}
             </motion.div>
             
             <SectionHeading>About Me</SectionHeading>
@@ -176,7 +165,7 @@ export default function About() {
               variants={childVariants}
               className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10"
             >
-              Full Stack Developer specializing in modern web technologies and passionate about creating exceptional user experiences.
+              Hi, I’m Khadeeja, a Front-end Developer specializing in React.js and Next.js. I build responsive, high-performance web applications with a strong focus on clean UI and smooth UX.
             </motion.p>
           </div>
 

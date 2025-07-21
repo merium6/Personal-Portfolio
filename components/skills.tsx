@@ -9,16 +9,12 @@ import {
   FaCode, 
   FaDatabase, 
   FaTools, 
-  FaLaptopCode, 
   FaPeopleCarry, 
   FaStar,
   FaRegStar,
   FaAws,
-  FaDocker,
-  FaRobot,
-  FaBrain
 } from "react-icons/fa";
-import { MdComputer, MdOutlineExpandMore, MdOutlineExpandLess } from "react-icons/md";
+import { MdOutlineExpandMore, MdOutlineExpandLess } from "react-icons/md";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiOpenai } from "react-icons/si";
 import 'react-circular-progressbar/dist/styles.css';
@@ -62,7 +58,7 @@ const fadeInAnimationVariants = {
     opacity: 0,
     y: 20,
   },
-  animate: (index) => ({
+  animate: (index : number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -73,11 +69,11 @@ const fadeInAnimationVariants = {
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills", 0);
-  const [expandedCategory, setExpandedCategory] = useState(null);
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const [activeFilter, setActiveFilter] = useState('All');
 
   // Function to toggle expanded category view
-  const toggleCategory = (categoryIndex) => {
+  const toggleCategory = (categoryIndex : number) => {
     if (expandedCategory === categoryIndex) {
       setExpandedCategory(null);
     } else {
@@ -86,7 +82,7 @@ export default function Skills() {
   };
 
   // Convert proficiency percentage to star rating (out of 5)
-  const getStarRating = (proficiency) => {
+  const getStarRating = (proficiency: number) => {
     const stars = Math.round(proficiency / 20);
     return stars;
   };
@@ -123,8 +119,9 @@ export default function Skills() {
     >
       <SectionHeading>Skills & Expertise</SectionHeading>
       <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-[42rem] mx-auto">
-        My technical proficiency spans multiple domains including full-stack development, AI & ML, and DevOps,
-        enabling me to build comprehensive solutions from concept to deployment.
+        My technical expertise lies in front-end development, with a strong command over tools like React.js, 
+        Next.js, Tailwind CSS, and shadcn/ui. I build responsive, performant, and scalable web applications 
+        from concept to deployment. 
       </p>
 
       {/* Top skills spotlight */}
@@ -180,8 +177,8 @@ export default function Skills() {
         {filteredSkills.map((category, categoryIndex) => (
           <motion.div
             key={categoryIndex}
-            className={`relative bg-gradient-to-br ${gradientMapping[category.category] || "from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50"} 
-                      ${borderMapping[category.category] || "border-gray-200 dark:border-gray-700"} 
+            className={`relative bg-gradient-to-br ${gradientMapping[category.category as keyof typeof gradientMapping] || "from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50"} 
+                      ${borderMapping[category.category as keyof typeof borderMapping] || "border-gray-200 dark:border-gray-700"} 
                       border-2 rounded-xl p-6 shadow-lg hover:shadow-xl transition
                       overflow-hidden`}
             initial="initial"
@@ -200,7 +197,7 @@ export default function Skills() {
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-3">
                 <div className="p-3 rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md">
-                  {iconMapping[category.category] || <FaTools className="text-3xl text-gray-500" />}
+                  {iconMapping[category.category as keyof typeof iconMapping] || <FaTools className="text-3xl text-gray-500" />}
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-200">
                   {category.category}

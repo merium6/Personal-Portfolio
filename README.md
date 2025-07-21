@@ -1,72 +1,50 @@
-# Abdul Aziz Personal Website
+# Khadeeja Asif – Personal Portfolio
 
-## Overview
+## 🌐 Overview
 
-Welcome to my personal website! This project showcases my skills as a full-stack developer, featuring a modern design and various cutting-edge technologies.
+Welcome to my personal portfolio! This project showcases my skills and work as a Front-end Developer, featuring a clean UI, responsive layout, and modern technologies. It's designed to highlight my technical strengths, professional journey, and the real-world projects I’ve contributed to.
 
-## What You Will Learn
+---
 
-- Latest Next.js 13 features
-- Next.js App Router
-- Next.js Server Actions
-- Client & Server Components
-- TypeScript (Beginner & Intermediate)
-- Tailwind CSS
-- Context API
-- Advanced Animations with Framer Motion
-- React.Email & Resend
-- Custom React Hooks
-- Fresh, Modern UI Design
-- Light & Dark Mode
-- Responsive Web Design
+## 🚀 Tech Stack Highlights
 
-## Getting Started
+- **Next.js** (App Router)
+- **React.js** (Functional Components & Hooks)
+- **Tailwind CSS** (Utility-first styling)
+- **shadcn/ui** (Component design system)
+- **TypeScript** (Type-safe coding)
+- **Framer Motion** (Smooth animations)
+- **SWR** (Data fetching)
+- **Responsive Design** (Mobile-first)
+- **Dark/Light Mode** support
 
-To get a local copy up and running, follow these steps:
+---
 
-### Prerequisites
+## 📚 What You'll Learn (if you're here to peek code)
 
-- [Node.js](https://nodejs.org/) (version 14 or higher)
-- npm (comes with Node.js)
+- Folder structure for scalable Next.js apps
+- Reusable UI components using `shadcn/ui`
+- Animating components with Framer Motion
+- Theme toggling (light/dark)
+- Managing global state via Context API
+- Organizing and mapping project data dynamically
+- Clean and maintainable code with TypeScript
 
-### Setup
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/repo-name.git
-   cd repo-name
-   ```
+## 🛠️ Getting Started
 
-2. Install the dependencies:
-   ```bash
-   npm install
-   ```
+To run this locally:
 
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+### 🔑 Prerequisites
 
-4. Add the required environment variable:
-   - Create a `.env.local` file in the root directory of the project.
-   - Add your `RESEND_API_KEY`:
-     ```
-     RESEND_API_KEY=your_api_key_here
-     ```
+- [Node.js](https://nodejs.org/) (v14+)
+- npm or yarn
 
-5. Update email settings:
-   - In the `send-email.ts` action file, change the "to" email address to your own.
+### 💻 Setup Instructions
 
-## Connect with Me
-
-Feel free to reach out or connect with me on various platforms:
-
-- **LeetCode**: [connect2abdulaziz](https://leetcode.com/connect2abdulaziz)
-- **LinkedIn**: [connect2abdulaziz](https://linkedin.com/in/connect2abdulaziz)
-- **GitHub**: [connect2abdulaziz](https://github.com/connect2abdulaziz)
-- **Instagram**: [connect2abdulaziz](https://instagram.com/connect2abdulaziz)
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+```bash
+git clone https://github.com/Khadeejahh-Asiff/livepersonalportfolio
+cd personalportfolio
+npm install
+npm run dev

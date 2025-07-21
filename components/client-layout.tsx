@@ -7,11 +7,11 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 
 export default function ClientLayout({
   children,
-}) {
+}: { children: ReactNode }) {
   const [starCount, setStarCount] = useState(100);
   
   // Adjust star count based on screen size

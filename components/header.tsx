@@ -8,6 +8,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTheme } from "@/context/theme-context";
 import { FaCode } from "react-icons/fa";
 import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
+import type { SectionName } from "@/lib/types";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -75,7 +76,7 @@ export default function Header() {
             </div>
             <span className={`text-lg font-bold ${
               theme === "light" ? "text-gray-900" : "text-white"
-            } hidden sm:block`}>Abdul Aziz</span>
+            } hidden sm:block`}>Khadeeja Asif</span>
           </motion.div>
           
           {/* Desktop Navigation */}
@@ -198,7 +199,16 @@ export default function Header() {
 }
 
 // Nav Item Component
-const NavItem = ({ link, index, activeSection, setActiveSection, setTimeOfLastClick, theme }) => {
+type NavItemProps = {
+  link: { name: string; hash: string };
+  index: number;
+  activeSection: SectionName;
+  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  setTimeOfLastClick: (time: number) => void;
+  theme: string;
+};
+
+const NavItem = ({ link, index, activeSection, setActiveSection, setTimeOfLastClick, theme }: NavItemProps) => {
   return (
     <motion.li 
       className="relative"
@@ -214,7 +224,7 @@ const NavItem = ({ link, index, activeSection, setActiveSection, setTimeOfLastCl
             : theme === "light" ? "text-gray-600 hover:text-gray-900" : "text-gray-400 hover:text-gray-200"
         }`}
         onClick={() => {
-          setActiveSection(link.name);
+          setActiveSection(link.name as SectionName);
           setTimeOfLastClick(Date.now());
         }}
       >

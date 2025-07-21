@@ -20,6 +20,7 @@ export default function Project({
   liveUrl,
   id,
   index,
+  keyFeatures,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -36,13 +37,14 @@ export default function Project({
       { threshold: 0.2 }
     );
     
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
     
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -126,7 +128,7 @@ export default function Project({
   // Content sections for tabs
   const tabContent = [
     { id: 'overview', label: 'Overview', content: description },
-    { id: 'features', label: 'Key Features', content: 'This project includes several key features...' },
+    { id: 'features', label: 'Key Features', content: keyFeatures },
     { id: 'tech', label: 'Technologies', content: tags.join(', ') }
   ];
 
@@ -338,7 +340,15 @@ export default function Project({
                     transition={{ duration: 0.3 }}
                     className="text-gray-600 dark:text-gray-300 leading-relaxed prose prose-sm dark:prose-invert max-w-none"
                   >
-                    <p>{tabContent[activeTab].content}</p>
+                    {activeTab === 1 && Array.isArray(tabContent[activeTab].content) ? (
+                      <ul className="list-disc pl-5">
+                        {tabContent[activeTab].content.map((feature: string, idx: number) => (
+                          <li key={idx}>{feature}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{tabContent[activeTab].content}</p>
+                    )}
                   </motion.div>
                 </AnimatePresence>
               </div>
@@ -385,17 +395,17 @@ export default function Project({
 }
 
 // Animated Tab Content Component
-function AnimatedTabContent({ activeTab, content }) {
-  return (
-    <motion.div
-      key={activeTab}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3 }}
-      className="text-gray-600 dark:text-gray-300 leading-relaxed"
-    >
-      <p>{content}</p>
-    </motion.div>
-  );
-}
+// function AnimatedTabContent({ activeTab, content }: { activeTab: number; content: string }) {
+//   return (
+//     <motion.div
+//       key={activeTab}
+//       initial={{ opacity: 0, y: 20 }}
+//       animate={{ opacity: 1, y: 0 }}
+//       exit={{ opacity: 0, y: -20 }}
+//       transition={{ duration: 0.3 }}
+//       className="text-gray-600 dark:text-gray-300 leading-relaxed"
+//     >
+//       <p>{content}</p>
+//     </motion.div>
+//   );
+// }

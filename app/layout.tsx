@@ -17,10 +17,22 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Abdul Aziz | Full Stack Developer Portfolio",
-  description: "Abdul Aziz is a full-stack developer specializing in MERN stack, Next.js and Nest.js with 1+ years of professional experience.",
-  keywords: ["developer", "portfolio", "full stack", "MERN", "react", "next.js", "nest.js"],
+  title: "Khadeeja Asif | Front-end Developer Portfolio",
+  description:
+    "Khadeeja Asif is a front-end developer specializing in React.js, Next.js, Tailwind CSS, and modern UI libraries. With hands-on experience building responsive, high-performance web applications, she crafts sleek, scalable user experiences.",
+  keywords: [
+    "frontend developer",
+    "react developer",
+    "next.js",
+    "tailwind css",
+    "mui",
+    "shadcn",
+    "portfolio",
+    "web developer",
+    "UI developer",
+  ],
 };
+
 
 export default function RootLayout({
   children,
