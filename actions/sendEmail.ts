@@ -7,7 +7,7 @@ import ContactFormEmail from '@/email/contact-form-email';
 import React from 'react';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const receiverEmail = process.env.RECEIVE_EMAIL || 'khadeejaasif323@gmail.com';
+const receiverEmail = process.env.RECEIVE_EMAIL || 'mariyamali1623@gmail.com';
 
 interface EmailResponse {
   data?: unknown;

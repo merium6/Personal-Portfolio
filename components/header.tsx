@@ -76,7 +76,7 @@ export default function Header() {
             </div>
             <span className={`text-lg font-bold ${
               theme === "light" ? "text-gray-900" : "text-white"
-            } hidden sm:block`}>Khadeeja Asif</span>
+            } hidden sm:block`}>Maryam Ali</span>
           </motion.div>
           
           {/* Desktop Navigation */}

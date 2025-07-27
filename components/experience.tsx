@@ -127,11 +127,12 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
         >
           <SectionHeading>My Experience</SectionHeading>
-          <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-          My professional journey reflects a strong foundation in front-end development, with hands-on experience building scalable, 
-          responsive web applications using React.js, Next.js, and Tailwind CSS. Through real-world projects and industry roles, 
-          I’ve honed skills in performance optimization, UI design, and collaborative development in Agile teams.
-          </p>
+       <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+        My professional journey reflects a solid foundation in full-stack development with a specialization in ASP.NET Core, C#, and SQL Server. 
+        I’ve built scalable, secure web applications, designed RESTful APIs, and implemented authentication systems using JWT and OAuth 2.0. 
+        Through real-world projects and team collaborations, I’ve honed skills in clean architecture, database optimization, and delivering reliable software solutions.
+      </p>
+
           
           {/* Filter tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-10">

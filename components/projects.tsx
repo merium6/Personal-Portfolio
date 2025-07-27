@@ -109,15 +109,16 @@ export default function Projects() {
         <SectionHeading>My Projects</SectionHeading>
         
         <motion.p 
-          className="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Dive into the projects I’ve built, both professionally and personally. 
-          Whether it’s building scalable dashboards or crafting sleek UIs with React and Next.js, 
-          each project highlights my development workflow, design decisions, and technical toolkit.
-        </motion.p>
+        className="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Dive into the projects I’ve developed, from academic work to real-world applications. 
+        Whether it’s designing secure APIs, building feature-rich ASP.NET Core web apps, or creating dynamic user interfaces with JavaScript and jQuery, 
+        each project showcases my problem-solving approach, backend logic, and clean, responsive UI design.
+      </motion.p>
+
         
         {/* Filter tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">

@@ -1,163 +1,150 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaCode, FaBriefcase, FaLaptopCode } from "react-icons/fa";
+import { FaCode, FaBriefcase, FaLaptopCode } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { FaDatabase, FaServer } from "react-icons/fa";
 
 export const experiencesData = [
   {
     id: 1,
-    title: "Associate Software Engineer",
-    location: "InvoByte, Lahore, Pakistan",
+    title: "Software Engineer",
+    location: "Invobyte, Lahore, Pakistan",
     description:
-      "Working on CIMS, an authentication and authorization system. Building reusable components with Next.js, Tailwind CSS, and shadcn/ui to manage client and application-level access controls.",
+      "Working on Central Identity Management System (CIMS) – an OAuth 2.0 and OpenID Connect compliant authentication and authorization platform built with .NET 9. Developed secure token generation services and implemented RBAC/ABAC authorization.",
     icon: React.createElement(CgWorkAlt),
-    date: "May 2025 – Present",
+    date: "June 2025 – Present",
     type: "fulltime",
     skills: [
-      "Next.js",
-      "shadcn/ui",
-      "Tailwind CSS",
+      ".NET 9",
+      "OAuth 2.0 / OIDC",
+      "JWT",
       "RBAC/ABAC",
-      "Component Reusability",
-      "Access Control Systems",
-      "UI Optimization"
+      "Secure API Design",
+      "Token Lifecycle Management"
     ],
     details: [
-      "Built reusable UI components with shadcn/ui and Tailwind",
-      "Developed client- and application-level permission management",
-      "Implemented RBAC and ABAC models for secure resource access",
-      "Focused on scalable and optimized front-end architecture",
+      "Developed JWT-based token generation and validation system",
+      "Implemented secure access control using RBAC/ABAC",
+      "Integrated OAuth 2.0 and OIDC for standardized auth flows",
+      "Built scalable services ensuring secure resource handling"
     ]
   },
   {
     id: 2,
-    title: "Junior Frontend Developer",
-    location: "Tekvaly / Phenologix, Lahore, Pakistan",
+    title: "Associate Software Engineer",
+    location: "Phenologix / Tekvaly, Lahore, Pakistan",
     description:
-      "Worked on platforms like ScrumDroid and Hiredroid, delivering responsive and optimized interfaces using ReactJS and SWR. Collaborated with backend teams to ensure seamless data handling.",
-    icon: React.createElement(FaReact),
+      "Worked on enterprise systems including RentCheck and AxesLaw using ASP.NET Core and Razor. Built RESTful APIs, optimized SQL databases, and developed dynamic UIs using jQuery and AJAX.",
+    icon: React.createElement(FaServer),
     date: "June 2024 – May 2025",
     type: "fulltime",
     skills: [
-      "React.js",
-      "Next.js",
-      "SWR",
-      "Tailwind CSS",
-      "UI Optimization",
-      "Component Design",
-      "Responsive Design"
+      "ASP.NET Core",
+      "SQL Server / MySQL",
+      "Razor / jQuery",
+      "Entity Framework Core",
+      "JWT / Cookie Auth",
+      "API Development"
     ],
     details: [
-      "Built responsive UI for ScrumDroid and Hiredroid platforms",
-      "Integrated SWR for optimized data fetching",
-      "Collaborated with backend team to ensure seamless UX",
-      "Implemented reusable components and mobile-first layouts"
+      "Built REST APIs using ASP.NET Core (.NET 6/8)",
+      "Developed Razor views and AJAX-based UI interactions",
+      "Handled backend logic and database optimization",
+      "Led development on RentCheck and AxesLaw projects"
     ]
   },
   {
     id: 3,
-    title: "Freelance Frontend Developer",
+    title: "Freelance Developer",
     location: "Remote",
     description:
-      "Created a personal developer portfolio and contributed to Heartland Rehab’s website using modern front-end tools and best practices.",
+      "Developed modules for educational platforms and portfolio websites using ASP.NET Core, jQuery, and Razor Pages. Integrated third-party payment APIs and implemented role-based access.",
     icon: React.createElement(FaLaptopCode),
-    date: "June 2023 – April 2025",
+    date: "June 2023 – April 2024",
     type: "freelance",
     skills: [
-      "React.js",
-      "Next.js",
-      "React Bootstrap",
-      "Responsive Design",
-      "UI/UX Implementation",
-      "Portfolio Development"
+      "ASP.NET Core",
+      "jQuery",
+      "SignalR",
+      "Role-Based Access",
+      "Razor Pages",
+      "Email Verification / Razorpay Integration"
     ],
     details: [
-      "Developed a personal portfolio website using React.js",
-      "Built Heartland Rehab’s site using Next.js & React Bootstrap",
-      "Implemented clean UI with component-based architecture",
-      "Handled responsiveness and SEO-friendly structure"
+      "Built API services for Mojigurukul education platform",
+      "Created role-based dashboards and leaderboard system",
+      "Integrated payment system and email verification",
+      "Resolved bugs and enhanced cross-module performance"
     ]
   },
   {
     id: 4,
-    title: "Bachelor of Science in Software Engineering",
-    location: "University of Central Punjab, Lahore",
+    title: "BS in Computer Science",
+    location: "PUCIT, Lahore",
     description:
-      "Completed a 4-year degree in Software Engineering with a CGPA of 3.61. Developed a strong foundation in front-end technologies, software development, and programming fundamentals.",
+      "Graduated with core focus on software engineering, data structures, algorithms, and web development. Built academic projects using C#, .NET, and ML.NET.",
     icon: React.createElement(LuGraduationCap),
-    date: "Oct 2020 – July 2024",
+    date: "Dec 2020 – June 2024",
     type: "education",
     skills: [
-      "HTML/CSS/JS",
-      "React",
-      "TypeScript",
-      "Software Engineering Principles",
-      "Agile Methodology",
-      "Project Work"
+      "C# / .NET",
+      "ML.NET",
+      "DBMS",
+      "AI & Machine Learning",
+      "Software Engineering Principles"
     ],
     details: [
-      "Graduated with a CGPA of 3.61",
-      "Completed hands-on frontend and full stack development projects",
-      "Worked on collaborative coding and agile-based workflows",
-      "Gained expertise in programming, UI, and team collaboration"
+      "Completed hands-on projects in AI and backend systems",
+      "Focused on clean coding and scalable architecture",
+      "Collaborated in Agile and academic team settings"
     ]
   }
 ] as const;
 
-
 export const skillsData = [
   {
-    category: "Core Frontend",
+    category: "Languages & Backend",
+    skills: [
+      { name: "C#", proficiency: 90 },
+      { name: "ASP.NET Core", proficiency: 90 },
+      { name: "Entity Framework Core", proficiency: 85 },
+      { name: "SQL Server", proficiency: 85 },
+    ],
+  },
+  {
+    category: "Frontend & Markup",
     skills: [
       { name: "HTML5", proficiency: 90 },
       { name: "CSS3", proficiency: 85 },
-      { name: "JavaScript (ES6+)", proficiency: 90 },
-      { name: "TypeScript", proficiency: 80 },
+      { name: "JavaScript", proficiency: 90 },
+      { name: "jQuery", proficiency: 85 },
     ],
   },
   {
-    category: "Frameworks & Libraries",
+    category: "Tools & Platforms",
     skills: [
-      { name: "React.js", proficiency: 85 },
-      { name: "Next.js", proficiency: 85 },
-      { name: "Redux Toolkit", proficiency: 75 },
-      { name: "SWR", proficiency: 75 },
+      { name: "Git / GitHub", proficiency: 90 },
+      { name: "Visual Studio", proficiency: 90 },
+      { name: "Postman", proficiency: 80 },
+      { name: "Swagger", proficiency: 80 },
     ],
   },
   {
-    category: "Styling & UI Libraries",
+    category: "Other Skills",
     skills: [
-      { name: "Tailwind CSS", proficiency: 85 },
-      { name: "Material UI (MUI)", proficiency: 80 },
-      { name: "shadcn/ui", proficiency: 80 },
-      { name: "React Bootstrap", proficiency: 70 },
-    ],
-  },
-  {
-    category: "Dev Tools & Workflow",
-    skills: [
-      { name: "Git", proficiency: 90 },
-      { name: "GitHub", proficiency: 85 },
-      { name: "VS Code", proficiency: 90 },
-      { name: "Chrome DevTools", proficiency: 85 },
-    ],
-  },
-  {
-    category: "APIs, Testing & Design",
-    skills: [
-      { name: "Postman (API Testing)", proficiency: 80 },
-      { name: "Swagger (API Docs)", proficiency: 75 },
-      { name: "Figma (UI/UX Collaboration)", proficiency: 80 },
-    ],
-  },
-  {
-    category: "Professional Strengths",
-    skills: [
-      { name: "Responsive Design", proficiency: 85 },
-      { name: "Component Architecture", proficiency: 85 },
+      { name: "SignalR", proficiency: 75 },
+      { name: "JWT / OAuth2", proficiency: 85 },
+      { name: "Razor Pages", proficiency: 80 },
       { name: "Performance Optimization", proficiency: 80 },
-      { name: "Agile / Scrum", proficiency: 80 },
-      { name: "API Integration", proficiency: 80 },
+    ],
+  },
+  {
+    category: "Soft Skills & Practices",
+    skills: [
+      { name: "Agile / Scrum", proficiency: 85 },
+      { name: "Team Collaboration", proficiency: 90 },
+      { name: "Clean Code", proficiency: 85 },
+      { name: "Problem Solving", proficiency: 90 },
     ],
   },
 ];
@@ -189,84 +176,63 @@ export const links = [
   },
 ] as const;
 
-
 export const projectsData = [
   {
     id: 1,
-    title: "Heartland Rehab",
+    title: "Mojigurukul",
     description:
-      "A responsive, performance-optimized rehab clinic website built with a component-based architecture. Integrated third-party tools for dynamic routing and a smooth user experience.",
-    tags: ["Next.js", "React Bootstrap", "Responsive Design"],
-    imageUrl: "/hlrehab.png",
+      "Personalized learning platform with role-based features and real-time leaderboards. Built secure backend with ASP.NET Core and SignalR.",
+    tags: ["ASP.NET Core", "SignalR", "RBAC", "API Security"],
+    imageUrl: "/neith.png",
     githubUrl: "",
-    liveUrl: "https://heartlandrehab.sg/",
-    type: "web",
-    icon: React.createElement(FaCode),
-    keyFeatures: [
-      "Dynamic routing & seamless navigation",
-      "Component-based architecture for scalability",
-      "Responsive UI using React Bootstrap",
-      "Optimized performance for production"
-    ],
-    techDetails: "Built with Next.js and styled using React Bootstrap. Prioritized component reusability and mobile-first design for better user accessibility."
-  },
-  {
-    id: 2,
-    title: "Personal Portfolio",
-    description:
-      "A sleek, responsive developer portfolio built to showcase technical skills, projects, and experience with clean UI and routing using React.",
-    tags: ["React.js", "CSS3", "Responsive Design"],
-    imageUrl: "/portfolio.png",
-    githubUrl: "https://github.com/Khadeejahh-Asiff/livepersonalportfolio",
-    liveUrl: "",
-    type: "web",
-    icon: React.createElement(FaReact),
-    keyFeatures: [
-      "Responsive design for all devices",
-      "Component-based layout",
-      "Tech stack & projects showcase",
-      "Clean animations and modern UI"
-    ],
-    techDetails: "Built with React.js to demonstrate front-end expertise and present work/projects in a clean, organized manner."
-  },
-  {
-    id: 3,
-    title: "ScrumDroid",
-    description:
-      "A task and resource management platform designed to manage organizational workflows including attendance, asset tracking, and daily tasks.",
-    tags: ["React.js", "SWR", "Responsive Design"],
-    imageUrl: "/sd.png",
-    githubUrl: "",
-    liveUrl: "https://sd.tradefsd.com/",
+    liveUrl: "https://mojigurukul.com/",
     type: "webapp",
     icon: React.createElement(FaCode),
     keyFeatures: [
-      "Optimized UI for daily task handling",
-      "Asset and attendance tracking modules",
-      "SWR-based data fetching",
-      "Mobile-first responsive layout"
+      "RBAC based feature access",
+      "Real-time leaderboard using SignalR",
+      "Email-based parent invitation system",
+      "Tutor payouts via Razorpay"
     ],
-    techDetails: "Developed using React.js and SWR to ensure efficient state/data management and a smooth user experience across devices."
+    techDetails: "Developed secure APIs using ASP.NET Core and integrated real-time features with SignalR. Focused on performance and access control."
   },
   {
-    id: 4,
-    title: "HireDroid",
+    id: 2,
+    title: "RentCheck",
     description:
-      "A job portal enabling HR professionals to post jobs, manage interviews, and create company profiles, while applicants can apply for roles directly.",
-    tags: ["Next.js", "Responsive Design", "Job Portal"],
-    imageUrl: "/hd.png",
+      "Full-stack property management system handling workflows, listings, and role-based views. Built with .NET Core and Razor views.",
+    tags: [".NET Core", "Razor", "MySQL", "JWT Auth"],
+    imageUrl: "/rentcheck.png",
     githubUrl: "",
-    liveUrl: "https://hiredroid.tradefsd.com/",
+    liveUrl: "",
     type: "web",
-    icon: React.createElement(FaBriefcase),
+    icon: React.createElement(FaServer),
     keyFeatures: [
-      "Job posting and application management",
-      "HR and company profile features",
-      "Responsive and user-friendly UI",
-      "Built with scalable Next.js structure"
+      "Property listing workflows",
+      "JWT-based user tracking",
+      "Relational DB design and CRUD operations",
+      "Admin and user dashboards"
     ],
-    techDetails: "Built with Next.js, HireDroid delivers a smooth and intuitive job-search and management experience through clean, modular components."
+    techDetails: "Built with .NET 6, Razor Views, and MySQL. Focused on scalable architecture and dynamic permission mapping."
+  },
+  
+  {
+    id: 3,
+    title: "Neith Admin Portal",
+    description:
+      "Admin dashboard with secure login, user access control, and analytics modules. Developed role-based access logic and custom UI components.",
+    tags: ["ASP.NET Core", "RBAC", "Razor Pages", "Admin Panel"],
+    imageUrl: "/admin.png",
+    githubUrl: "",
+    liveUrl: "",
+    type: "web",
+    icon: React.createElement(FaCode),
+    keyFeatures: [
+      "Admin & sub-admin access control",
+      "Login & analytics tracking",
+      "Custom component-based Razor UI",
+      "Backend access configuration"
+    ],
+    techDetails: "Designed with Razor Pages in ASP.NET Core. Focused on admin-side usability, modular code, and fine-grained access control."
   }
 ] as const;
-
-

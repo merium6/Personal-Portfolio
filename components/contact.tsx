@@ -195,9 +195,9 @@ export default function Contact() {
             I'm always open to new opportunities and collaborations. Reach out directly at{" "}
             <a 
               className="relative inline-block group text-blue-600 dark:text-blue-400 font-medium" 
-              href="mailto:khadeejaasif323@gmail.com"
+              href="mailto:mariyamali1623@gmail.com"
             >
-              khadeejaasif323@gmail.com
+             mariyamali1623@gmail.com
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-500 dark:from-blue-600 dark:to-indigo-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </a>{" "}
             or fill out the form below.
@@ -211,9 +211,9 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             {[
-              { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/khadeejah-asif/", bgClass: "from-blue-600 to-blue-700", hoverClass: "from-blue-700 to-blue-800" },
-              { icon: <FaGithub />, url: "https://github.com/Khadeejahh-Asiff", bgClass: "from-gray-700 to-gray-800", hoverClass: "from-gray-800 to-gray-900" },
-              { icon: <FaTwitter />, url: "https://twitter.com", bgClass: "from-blue-400 to-blue-500", hoverClass: "from-blue-500 to-blue-600" }
+              { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/maryamali-softwarengineer/", bgClass: "from-blue-600 to-blue-700", hoverClass: "from-blue-700 to-blue-800" },
+              { icon: <FaGithub />, url: "https://github.com/merium6", bgClass: "from-gray-700 to-gray-800", hoverClass: "from-gray-800 to-gray-900" },
+              
             ].map((social, index) => (
               <motion.a
                 key={index}

@@ -8,6 +8,9 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare, FaCode, FaRobot, FaReact, FaReadme, FaUikit, FaCss3 } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import {  FaHtml5, FaBootstrap, FaDatabase } from "react-icons/fa";
+import { SiJquery, SiDotnet, SiCsharp, SiMicrosoftsqlserver } from "react-icons/si";
+
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -35,13 +38,14 @@ export default function Intro() {
 
   // Rotating skills showcase - updated with expanded expertise
   const skills = [
-    { text: "Frontend Development", icon: <FaCode className="text-blue-500" /> },
-    { text: "React Js", icon: <FaReact className="text-green-500" /> },
-    { text: "Next Js", icon: <FaRobot className="text-red-500" /> },
-    { text: "Redux", icon: <FaReadme className="text-purple-500" /> },
-    { text: "UI Libraries", icon: <FaUikit className="text-orange-500" /> },
-    { text: "CSS Frameworks", icon: <FaCss3 className="text-indigo-500" /> }
-  ];
+  { text: "HTML, CSS", icon: <FaHtml5 className="text-orange-600" /> },
+  { text: "jQuery", icon: <SiJquery className="text-purple-600" /> },
+  { text: "Bootstrap", icon: <FaBootstrap className="text-indigo-500" /> },
+  { text: "ASP.NET Core", icon: <SiDotnet className="text-blue-700" /> },
+  { text: "C#", icon: <SiCsharp className="text-violet-700" /> },
+  { text: "Entity Framework Core", icon: <FaDatabase className="text-green-600" /> },
+  { text: "SQL Server", icon: <SiMicrosoftsqlserver className="text-red-600" /> },
+];
 
   // Rotate through skills every 3 seconds
   useEffect(() => {
@@ -161,7 +165,7 @@ export default function Intro() {
           >
             Hi, I'm{" "}
             <span className="inline-block relative">
-              <span className="relative z-10">Khadeeja Asif</span>
+              <span className="relative z-10">Maryam Ali</span>
               <motion.span 
                 className="absolute bottom-0 left-0 w-full h-3 bg-blue-200 dark:bg-blue-800/50 -z-10"
                 initial={{ width: 0 }}
@@ -251,7 +255,7 @@ export default function Intro() {
           >
             <a
               className="group relative overflow-hidden px-8 py-4 flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full shadow-lg border border-gray-200 dark:border-gray-700"
-              href="/KhadeejaResume.pdf"
+              href="/MaryamAli.pdf"
               download
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -278,7 +282,7 @@ export default function Intro() {
             >
               <a
                 className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full shadow-md border border-blue-200 dark:border-blue-800"
-                href="https://www.linkedin.com/in/khadeejah-asif/"
+                href="https://www.linkedin.com/in/maryamali-softwarengineer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
@@ -295,7 +299,7 @@ export default function Intro() {
             >
               <a
                 className="flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 rounded-full shadow-md border border-gray-200 dark:border-gray-700"
-                href="https://github.com/Khadeejahh-Asiff"
+                href="https://github.com/merium6"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"

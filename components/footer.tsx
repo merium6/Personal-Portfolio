@@ -9,7 +9,9 @@ import {
   FaHeart, 
   FaReact, 
   FaNodeJs,
+  FaDatabase, FaGitAlt
 } from "react-icons/fa";
+import { SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiPostman, SiSwagger, SiMysql, SiPostgresql, SiJquery } from "react-icons/si";
 import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 import { motion, AnimatePresence } from "framer-motion";
@@ -22,13 +24,17 @@ export default function Footer() {
   
   // Tech stack with icons and names
   const techStack = [
-    { name: "React", icon: <FaReact className="text-blue-400" /> },
-    { name: "Next.js", icon: <TbBrandNextjs className="text-gray-700 dark:text-gray-200 " /> },
-    { name: "TypeScript", icon: <TbBrandTypescript className="text-blue-600" /> },
-    { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500" /> },
-    { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-  ];
+  { name: "C#", icon: <SiCsharp className="text-purple-600" /> },
+  { name: ".NET Core", icon: <SiDotnet className="text-blue-500" /> },
+  { name: "Entity Framework", icon: <FaDatabase className="text-emerald-600" /> },
+  { name: "SQL Server", icon: <SiMicrosoftsqlserver className="text-red-700" /> },
+  { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-indigo-600" /> },
+  { name: "jQuery", icon: <SiJquery className="text-blue-400" /> },
+  { name: "Swagger", icon: <SiSwagger className="text-green-500" /> },
+  { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+  { name: "Git & GitHub", icon: <FaGithub className="text-black dark:text-white" /> },
+];
 
   // Animation variants
   const hoverAnimation = {
@@ -65,20 +71,20 @@ export default function Footer() {
           <div className="relative mb-6">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full opacity-75 blur"></div>
             <div className="relative h-20 w-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-3xl font-bold text-white">KA</span>
+              <span className="text-3xl font-bold text-white">MA</span>
             </div>
           </div>
           
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Khadeeja Asif</h3>
-          <p className="text-gray-600 dark:text-gray-400 mt-1">Front-end Developer</p>
+          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Maryam Ali</h3>
+          <p className="text-gray-600 dark:text-gray-400 mt-1">Software Engineer</p>
           
           {/* Social links with hover effect */}
           <div className="flex justify-center space-x-4 mt-6">
             {[
-              { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/khadeejah-asif/", color: "bg-blue-500 hover:bg-blue-600" },
-              { icon: <FaGithub />, url: "https://github.com/Khadeejahh-Asiff", color: "bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700" },
-              { icon: <FaEnvelope />, url: "mailto:khadeejaasif323@gmail.com", color: "bg-red-500 hover:bg-red-600" },
-              { icon: <FaTwitter />, url: "https://twitter.com", color: "bg-blue-400 hover:bg-blue-500" }
+              { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/maryamali-softwarengineer/", color: "bg-blue-500 hover:bg-blue-600" },
+              { icon: <FaGithub />, url: "https://github.com/merium6", color: "bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700" },
+              { icon: <FaEnvelope />, url: "mailto:mariyamali1623@gmail.com@gmail.com", color: "bg-red-500 hover:bg-red-600" },
+            
             ].map((social, index) => (
               <motion.a
                 key={index}
@@ -168,7 +174,7 @@ export default function Footer() {
             >
               <FaHeart />
             </motion.div>
-            <span>by Khadeeja Asif</span>
+            <span>by Maryam Ali</span>
           </p>
           <p className="mt-2 text-gray-500 dark:text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} All rights reserved

@@ -17,21 +17,26 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Khadeeja Asif | Front-end Developer Portfolio",
+  title: "Maryam Ali | Software Engineer Portfolio",
   description:
-    "Khadeeja Asif is a front-end developer specializing in React.js, Next.js, Tailwind CSS, and modern UI libraries. With hands-on experience building responsive, high-performance web applications, she crafts sleek, scalable user experiences.",
+    "Maryam Ali is a software engineer specializing in ASP.NET Core, C#, Entity Framework, and full-stack web development. With strong expertise in building scalable APIs, secure authentication systems, and clean, maintainable code, she delivers robust enterprise solutions.",
   keywords: [
-    "frontend developer",
-    "react developer",
-    "next.js",
-    "tailwind css",
-    "mui",
-    "shadcn",
-    "portfolio",
-    "web developer",
-    "UI developer",
+    "software engineer",
+    ".NET developer",
+    "ASP.NET Core",
+    "C#",
+    "Entity Framework",
+    "SQL Server",
+    "REST APIs",
+    "full-stack developer",
+    "backend developer",
+    "JWT authentication",
+    "software development",
+    "clean architecture",
+    "web development",
   ],
 };
+
 
 
 export default function RootLayout({

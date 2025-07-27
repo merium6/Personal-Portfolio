@@ -118,11 +118,13 @@ export default function Skills() {
       className="mb-28 max-w-[62rem] scroll-mt-28 px-4 sm:px-8 mx-auto text-center"
     >
       <SectionHeading>Skills & Expertise</SectionHeading>
-      <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-[42rem] mx-auto">
-        My technical expertise lies in front-end development, with a strong command over tools like React.js, 
-        Next.js, Tailwind CSS, and shadcn/ui. I build responsive, performant, and scalable web applications 
-        from concept to deployment. 
-      </p>
+<p className="text-gray-600 dark:text-gray-400 mb-6 max-w-[42rem] mx-auto">
+  My technical expertise lies in full-stack web development using ASP.NET Core, C#, and SQL Server. 
+  On the front end, I work with HTML, CSS and jQuery to build clean and user-friendly interfaces. 
+  I have hands-on experience with REST APIs, Entity Framework Core, authentication with JWT, and real-time features using SignalR. 
+  My projects demonstrate a strong understanding of scalable architecture, secure coding practices, and clean deployment workflows.
+</p>
+
 
       {/* Top skills spotlight */}
       <motion.div
